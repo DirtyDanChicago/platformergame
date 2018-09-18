@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour {
 
+    public Rigidbody2D MyRigidBody;
+ 
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        Debug.Log("This is start.");
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        //Debug.Log("What's up fuckers?");
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            //Move Character to the right. 
+            MyRigidBody.velocity = new Vector2(5, MyRigidBody.velocity.y);
+
+        }
+
+  	}
 }
