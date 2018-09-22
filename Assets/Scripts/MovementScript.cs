@@ -25,5 +25,11 @@ public class MovementScript : MonoBehaviour {
 
         }
 
-  	}
+        if (Input.GetKey(KeyCode.W))
+        {
+            //Move Character to the right. 
+            MyRigidBody.velocity = new Vector2(5, MyRigidBody.velocity.y);
+
+        }
+    }
 }
