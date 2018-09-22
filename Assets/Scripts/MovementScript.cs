@@ -25,11 +25,12 @@ public class MovementScript : MonoBehaviour {
 
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.A))
         {
-            //Move Character to the right. 
-            MyRigidBody.velocity = new Vector2(5, MyRigidBody.velocity.y);
+            //Move Character to the left. 
+            MyRigidBody.velocity = new Vector2(-5, MyRigidBody.velocity.y);
 
         }
+
     }
 }
