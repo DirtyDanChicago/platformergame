@@ -2,25 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour {
+public class MovementScript : MonoBehaviour
+{
 
     public Rigidbody2D MyRigidBody;
 
     [SerializeField]
     private int speed;
-   
+
+    [SerializeField]
+    private int jumpHeight;
 
     // Use this for initialization
-	void Start ()
+    void Start()
     {
         Debug.Log("This is start.");
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        Move();
+        Jump();
+
+    }
+
+    void Move()
+    {
+        //Move with velocity because it is using physics.
         if (Input.GetKey(KeyCode.D))
         {
             //Move Character to the right. 
@@ -35,13 +45,18 @@ public class MovementScript : MonoBehaviour {
 
         }
 
-        if (Input.GetKey(KeyCode.W))
+       
+    }
+
+    // TODO: Make this jump a little, not forever.
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
         {
             //Move Character upwards. 
-            MyRigidBody.velocity = new Vector3(0,10, MyRigidBody.velocity.x);
+            MyRigidBody.velocity = new Vector3(0, jumpHeight, MyRigidBody.velocity.x);
 
         }
-
-
     }
+  
 }
