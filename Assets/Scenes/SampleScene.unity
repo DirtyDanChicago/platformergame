@@ -411,7 +411,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 3
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -455,4 +455,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyRigidBody: {fileID: 2070828911}
   speed: 10
-  jumpHeight: 70
+  jumpHeight: 20

@@ -13,6 +13,8 @@ public class MovementScript : MonoBehaviour
     [SerializeField]
     private int jumpHeight;
 
+    private float moveInput;
+
     // Use this for initialization
     void Start()
     {
@@ -23,11 +25,22 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
         Jump();
 
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void GetMovementInput()
+    {
+       moveInput = Input.GetAxis("Horizontal");
+    }
+
+    //Moves the character left and right.
     void Move()
     {
         //Move with velocity because it is using physics.
@@ -38,7 +51,7 @@ public class MovementScript : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetButton(KeyCode.A))
         {
             //Move Character to the left. 
             MyRigidBody.velocity = new Vector2(-speed, MyRigidBody.velocity.y);
@@ -48,10 +61,10 @@ public class MovementScript : MonoBehaviour
        
     }
 
-    // TODO: Make this jump a little, not forever.
+    //Moves the character up with each button press.
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown("Jump"))
         {
             //Move Character upwards. 
             MyRigidBody.velocity = new Vector3(0, jumpHeight, MyRigidBody.velocity.x);
