@@ -11,6 +11,7 @@ public class MovementScript : MonoBehaviour
 	private float speed = 5;
 
 	private float horizontalInput;
+	private float verticalInput;
 
 	// Use this for initialization
 	void Start()
@@ -23,15 +24,29 @@ public class MovementScript : MonoBehaviour
 	{
 		//Gathers horizontal movement.
 		horizontalInput = Input.GetAxis("Horizontal");
+		verticalInput = Input.GetAxis("Vertical");
 	}
 
 	//Fixed update for movement.
 	void FixedUpdate()
 	{
 
-        //Applies horizontal movement.
-		myRigidBody.AddForce(Vector2.right * horizontalInput * speed);
+		MoveHorizontal();
+
+		//MoveVertical();
         
 	}
+
+    void MoveHorizontal()
+	{
+		myRigidBody.AddForce(Vector2.right * horizontalInput * speed);
+	}
+
+    /*void MoveVertical()
+	{
+		myRigidBody.AddForce(Vector2.right * verticalInput * speed);
+	}
+    */
+
 
 }
