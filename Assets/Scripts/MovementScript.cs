@@ -4,72 +4,34 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+	[SerializeField]
+	private Rigidbody2D myRigidBody;
 
-    public Rigidbody2D MyRigidBody;
+	[SerializeField]
+	private float speed = 5;
 
-    [SerializeField]
-    private int speed;
+	private float horizontalInput;
 
-    [SerializeField]
-    private int jumpHeight;
+	// Use this for initialization
+	void Start()
+	{
+		Debug.Log("Game start successful.");
 
-    private float moveInput;
+	}
 
-    // Use this for initialization
-    void Start()
-    {
-        Debug.Log("This is start.");
+	private void Update()
+	{
+		//Gathers horizontal movement.
+		horizontalInput = Input.GetAxis("Horizontal");
+	}
 
-    }
+	//Fixed update for movement.
+	void FixedUpdate()
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
+        //Applies horizontal movement.
+		myRigidBody.AddForce(Vector2.right * horizontalInput * speed);
         
-        Jump();
+	}
 
-    }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
-    private void GetMovementInput()
-    {
-       moveInput = Input.GetAxis("Horizontal");
-    }
-
-    //Moves the character left and right.
-    void Move()
-    {
-        //Move with velocity because it is using physics.
-        if (Input.GetKey(KeyCode.D))
-        {
-            //Move Character to the right. 
-            MyRigidBody.velocity = new Vector2(speed, MyRigidBody.velocity.y);
-
-        }
-
-        if (Input.GetButton(KeyCode.A))
-        {
-            //Move Character to the left. 
-            MyRigidBody.velocity = new Vector2(-speed, MyRigidBody.velocity.y);
-
-        }
-
-       
-    }
-
-    //Moves the character up with each button press.
-    void Jump()
-    {
-        if (Input.GetKeyDown("Jump"))
-        {
-            //Move Character upwards. 
-            MyRigidBody.velocity = new Vector3(0, jumpHeight, MyRigidBody.velocity.x);
-
-        }
-    }
-  
 }
