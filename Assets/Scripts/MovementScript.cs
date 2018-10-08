@@ -4,43 +4,69 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    //Rigid body variable. 
 	[SerializeField]
 	private Rigidbody2D myRigidBody;
 
-	[SerializeField]
+    [SerializeField]
+    private float jumpForce = 10;
+
+    //Acceleration variable.
+    [SerializeField]
 	private float accelerationForce = 5;
 
+    //Max speed variable.
     [SerializeField]
     private float maxSpeed = 5;
 
+    [SerializeField]
+    private ContactFilter2D groundContactFilter;
+
+    [SerializeField]
+    private Collider2D groundDetectTrigger;
+
+    private Collider2D[] groundHitDetectionResults = new Collider2D[16];
+
+    private bool isOnGround;
+
+    //Horizontal, and vertical input variables.
 	private float horizontalInput;
-	private float verticalInput;
-
-	// Use this for initialization
-	void Start()
-	{
-		Debug.Log("Game start successful.");
-
-	}
 
 	private void Update()
 	{
-		//Gathers horizontal movement.
-		horizontalInput = Input.GetAxis("Horizontal");
-	
+        //On Ground Update.
+        UpdateIsOnGround();
+
+        //Horizontal Movement Function.
+        UpdateHorizontalMovement();
+
+        //Jump Input Function.
+        HandleJumpInput();
 	}
 
 	//Fixed update for movement.
 	void FixedUpdate()
 	{
-        //Calls MoveHorizontal function. 
-		MoveHorizontal();
-
-		
-        
+        //Calls Move function.
+        Move();
+	     
 	}
 
-    void MoveHorizontal()
+    private void UpdateIsOnGround()
+    {
+        isOnGround = groundDetectTrigger.OverlapCollider(groundContactFilter, groundHitDetectionResults) > 0;
+
+        //Debug.Log("Is On Ground?: " + isOnGround);
+    }
+
+
+    private void UpdateHorizontalMovement()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+    }
+
+    //Movement function.
+    private void Move()
 	{
 		myRigidBody.AddForce(Vector2.right * horizontalInput * accelerationForce);
 
@@ -51,6 +77,14 @@ public class MovementScript : MonoBehaviour
         myRigidBody.velocity = clampedVelocity;
 	}
 
-    
+
+    //Jump function.
+    private void HandleJumpInput()
+    {
+        if (Input.GetButtonDown("Jump") && isOnGround)
+        {
+            myRigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
 
 }
