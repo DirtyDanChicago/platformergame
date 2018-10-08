@@ -8,7 +8,10 @@ public class MovementScript : MonoBehaviour
 	private Rigidbody2D myRigidBody;
 
 	[SerializeField]
-	private float speed = 5;
+	private float accelerationForce = 5;
+
+    [SerializeField]
+    private float maxSpeed = 5;
 
 	private float horizontalInput;
 	private float verticalInput;
@@ -24,29 +27,30 @@ public class MovementScript : MonoBehaviour
 	{
 		//Gathers horizontal movement.
 		horizontalInput = Input.GetAxis("Horizontal");
-		verticalInput = Input.GetAxis("Vertical");
+	
 	}
 
 	//Fixed update for movement.
 	void FixedUpdate()
 	{
-
+        //Calls MoveHorizontal function. 
 		MoveHorizontal();
 
-		//MoveVertical();
+		
         
 	}
 
     void MoveHorizontal()
 	{
-		myRigidBody.AddForce(Vector2.right * horizontalInput * speed);
+		myRigidBody.AddForce(Vector2.right * horizontalInput * accelerationForce);
+
+        Vector2 clampedVelocity = myRigidBody.velocity;
+
+        clampedVelocity.x = Mathf.Clamp(myRigidBody.velocity.x, -maxSpeed, maxSpeed);
+
+        myRigidBody.velocity = clampedVelocity;
 	}
 
-    /*void MoveVertical()
-	{
-		myRigidBody.AddForce(Vector2.right * verticalInput * speed);
-	}
-    */
-
+    
 
 }
