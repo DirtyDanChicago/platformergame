@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Daniel Dababneh Platformer Game
+
+
 public class MovementScript : MonoBehaviour
 {
     //Rigid body variable. 
