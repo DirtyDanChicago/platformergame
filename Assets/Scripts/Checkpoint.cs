@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    [SerializeField]
+    private float rotationSpeed = 100;
+
+    private void UpdateRotation()
+    {
+
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
