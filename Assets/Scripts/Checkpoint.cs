@@ -9,7 +9,10 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Player entered the checkpoint.");
-            
+
+            MovementScript player = collision.GetComponent<MovementScript>();
+
+            player.SetCurrentCheckpoint(this);
         }
    
     }

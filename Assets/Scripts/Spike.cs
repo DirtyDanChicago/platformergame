@@ -11,6 +11,10 @@ public class Spike : MonoBehaviour
         {
             Debug.Log("Player entered the trigger.");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            MovementScript player = collision.GetComponent<MovementScript>();
+
+            player.Respawn();
         }
         else
         {

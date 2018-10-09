@@ -42,6 +42,9 @@ public class MovementScript : MonoBehaviour
     //Horizontal, and vertical input variables.
 	private float horizontalInput;
 
+    //Keeps track of checkpoint
+    private Checkpoint currentCheckpoint;
+
 	private void Update()
 	{
         //Stops the rotation.
@@ -117,4 +120,15 @@ public class MovementScript : MonoBehaviour
         }
     }
 
+    public void Respawn()
+    {
+        transform.position = currentCheckpoint.transform.position;
+    }
+
+    public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
+    {
+        currentCheckpoint = newCurrentCheckpoint;
+    }
+    
+   
 }
