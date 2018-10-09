@@ -44,6 +44,11 @@ public class MovementScript : MonoBehaviour
 
 	private void Update()
 	{
+        //Stops the rotation.
+        Vector3 currentRotation = transform.localEulerAngles;
+        currentRotation.z = 0;
+        transform.localEulerAngles = currentRotation;
+        
         //On Ground Update.
         UpdateIsOnGround();
 
