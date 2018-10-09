@@ -20,10 +20,16 @@ public class MovementScript : MonoBehaviour
     private float maxSpeed = 5;
 
     [SerializeField]
-    private ContactFilter2D groundContactFilter;
+    private Collider2D playerGroundCollider;
+
+    [SerializeField]
+    private PhysicsMaterial2D playerMovingPhysicsMaterial, playerStoppingPhysicsMaterial;
 
     [SerializeField]
     private Collider2D groundDetectTrigger;
+
+    [SerializeField]
+    private ContactFilter2D groundContactFilter;
 
     private Collider2D[] groundHitDetectionResults = new Collider2D[16];
 
@@ -47,10 +53,25 @@ public class MovementScript : MonoBehaviour
 	//Fixed update for movement.
 	void FixedUpdate()
 	{
+        UpdatePhysicsMaterial();
+
         //Calls Move function.
         Move();
-	     
 	}
+
+    private void UpdatePhysicsMaterial()
+    {
+        if (Mathf.Abs(horizontalInput) > 0)
+        {
+            playerGroundCollider.sharedMaterial = playerMovingPhysicsMaterial;
+        }
+
+        else
+        {
+            playerGroundCollider.sharedMaterial = playerStoppingPhysicsMaterial;
+        }
+    }
+
 
     private void UpdateIsOnGround()
     {
@@ -62,7 +83,7 @@ public class MovementScript : MonoBehaviour
 
     private void UpdateHorizontalMovement()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
     }
 
     //Movement function.
