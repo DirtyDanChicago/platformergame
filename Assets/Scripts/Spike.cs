@@ -9,8 +9,7 @@ public class Spike : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered the trigger.");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("Player entered the trigger.");          
 
             MovementScript player = collision.GetComponent<MovementScript>();
 

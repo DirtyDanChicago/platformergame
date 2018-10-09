@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 //Daniel Dababneh Platformer Game
@@ -122,7 +123,19 @@ public class MovementScript : MonoBehaviour
 
     public void Respawn()
     {
-        transform.position = currentCheckpoint.transform.position;
+
+        if (currentCheckpoint == null)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            Debug.Log("The player died and respawed.");
+        }
+        else
+        {
+            myRigidBody.velocity = Vector2.zero;
+            transform.position = currentCheckpoint.transform.position;
+        }
+       
     }
 
     public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
