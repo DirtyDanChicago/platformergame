@@ -5,11 +5,29 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     [SerializeField]
-    private float rotationSpeed = 100;
+    private float inactiveSpeed = 100, activeSpeed = 200;
+
+    private bool isActivated = false;
+
+    private void Update()
+    {
+        UpdateRotation();
+    }
 
     private void UpdateRotation()
     {
+        float rotationSpeed = inactiveSpeed;
+        if (isActivated)
+        {
+            rotationSpeed = activeSpeed;
+        }
 
+        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+    }
+
+    public void SetIsActivated(bool value)
+    {
+        isActivated = value;
     }
 
 
