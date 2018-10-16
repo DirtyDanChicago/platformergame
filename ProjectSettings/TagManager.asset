@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - Ground
-  - Background
-  - 
+  - Player
+  - Door
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Door
+    uniqueID: 3028755411
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
