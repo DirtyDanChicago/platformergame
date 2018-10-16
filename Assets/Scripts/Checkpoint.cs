@@ -7,11 +7,34 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     private float inactiveSpeed = 100, activeSpeed = 200;
 
+    [SerializeField]
+    private float inactiveScale = 1, activatedScale = 0.5f;
+
+    [SerializeField]
+    private Color inactiveColor, activeColor;
+
     private bool isActivated = false;
 
     private void Update()
     {
         UpdateRotation();
+        UpdatedScale();
+    }
+
+    private void UpdatedColor()
+    {
+        Color color =
+    }
+
+    private void UpdatedScale()
+    {
+        float scale = inactiveScale;
+
+        if (isActivated)
+        {
+            scale = activatedScale;
+            transform.localScale = Vector3.one * scale;
+        }
     }
 
     private void UpdateRotation()
@@ -28,6 +51,8 @@ public class Checkpoint : MonoBehaviour
     public void SetIsActivated(bool value)
     {
         isActivated = value;
+
+        
     }
 
 
