@@ -15,6 +15,13 @@ public class Checkpoint : MonoBehaviour
 
     private bool isActivated = false;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void Update()
     {
         UpdateRotation();
@@ -31,6 +38,7 @@ public class Checkpoint : MonoBehaviour
             color = activeColor;
         }
 
+        spriteRenderer.color = color;
     }
 
     private void UpdatedScale()
@@ -40,8 +48,10 @@ public class Checkpoint : MonoBehaviour
         if (isActivated)
         {
             scale = activatedScale;
-            transform.localScale = Vector3.one * scale;
+            
         }
+
+        transform.localScale = Vector3.one * scale;
     }
 
     private void UpdateRotation()

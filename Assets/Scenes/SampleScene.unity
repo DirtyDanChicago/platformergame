@@ -726,7 +726,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inactiveSpeed: 50
-  activeSpeed: 200
+  activeSpeed: 300
+  inactiveScale: 1
+  activatedScale: 0.5
+  inactiveColor: {r: 1, g: 0, b: 0.97927, a: 1}
+  activeColor: {r: 1, g: 0.96941197, b: 0, a: 1}
 --- !u!1001 &1359691274
 Prefab:
   m_ObjectHideFlags: 0
