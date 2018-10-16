@@ -19,11 +19,18 @@ public class Checkpoint : MonoBehaviour
     {
         UpdateRotation();
         UpdatedScale();
+        UpdatedColor();
     }
 
     private void UpdatedColor()
     {
-        Color color =
+        Color color = inactiveColor;
+
+        if (isActivated)
+        {
+            color = activeColor;
+        }
+
     }
 
     private void UpdatedScale()
