@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    [SerializeField]
+    private string sceneToLoad;
+
     private bool isPlayerInTrigger = false;
 
     //Can't use this, triggers door twice.
@@ -40,7 +43,7 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Player activated door.");
 
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene(sceneToLoad);
 
         }
     }
