@@ -146,6 +146,6 @@ public class MovementScript : MonoBehaviour
         currentCheckpoint = newCurrentCheckpoint;
         currentCheckpoint.SetIsActivated(true);
     }
-    
-   
+
+
 }

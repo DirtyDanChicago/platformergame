@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Spike : MonoBehaviour
+public class Spike : MonoBehaviour  
 {
+  
     private AudioSource audioSource;
+
 
     private void Start()
     {
@@ -24,10 +26,14 @@ public class Spike : MonoBehaviour
             player.Respawn();
 
             audioSource.Play();
+
+
         }
         else
         {
             Debug.Log("Something other than the player entered the trigger.");
         }
     }
+
+    
 }
