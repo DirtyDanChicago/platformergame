@@ -40,6 +40,8 @@ public class MovementScript : MonoBehaviour
 
     private bool isOnGround;
 
+    private bool facingRight = true;
+
     //Horizontal, and vertical input variables.
 	private float horizontalInput;
 
@@ -70,7 +72,17 @@ public class MovementScript : MonoBehaviour
 
         //Calls Move function.
         Move();
-	}
+
+        if (horizontalInput > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if(horizontalInput < 0 && facingRight)
+        {
+            Flip();
+        }
+
+    }
 
     private void UpdatePhysicsMaterial()
     {
@@ -85,6 +97,13 @@ public class MovementScript : MonoBehaviour
         }
     }
 
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
     private void UpdateIsOnGround()
     {
@@ -109,6 +128,7 @@ public class MovementScript : MonoBehaviour
         clampedVelocity.x = Mathf.Clamp(myRigidBody.velocity.x, -maxSpeed, maxSpeed);
 
         myRigidBody.velocity = clampedVelocity;
+
 	}
 
 
