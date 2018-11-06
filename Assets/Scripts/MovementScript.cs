@@ -128,7 +128,16 @@ public class MovementScript : MonoBehaviour
     {
         isOnGround = groundDetectTrigger.OverlapCollider(groundContactFilter, groundHitDetectionResults) > 0;
 
-        //Debug.Log("Is On Ground?: " + isOnGround);
+        Debug.Log("Is On Ground?: " + isOnGround);
+
+        if(isOnGround == true)
+        {
+            myAnimator.SetBool("onground", true);
+        }
+        else
+        {
+            myAnimator.SetBool("onground", false);
+        }
     }
 
     //Gets horizontal movement input.
@@ -157,10 +166,12 @@ public class MovementScript : MonoBehaviour
     //Jump function.
     private void HandleJumpInput()
     {
+        
         if (Input.GetButtonDown("Jump") && isOnGround)
         {
             myRigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+      
     }
 
     //Respawns player.
