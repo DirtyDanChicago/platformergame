@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 60296105278047622}
   - component: {fileID: 95177924580855768}
   m_Layer: 9
-  m_Name: SquareBoy
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.950003, y: 2.290001, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: -9.950003, y: 2.2861, z: 0}
+  m_LocalScale: {x: 5, y: 5.013428, z: 5}
   m_Children:
   - {fileID: 4906071517556198}
   m_Father: {fileID: 0}
@@ -149,16 +149,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.17, y: -0.195}
-      - {x: 0.15352726, y: -0.044999983}
-      - {x: 0.15176354, y: 0.094999984}
+    - - {x: 0.13551044, y: -0.19234693}
+      - {x: 0.14954777, y: -0.04765301}
+      - {x: 0.13717175, y: 0.08969388}
       - {x: 0.13, y: 0.16499999}
-      - {x: 0.099999994, y: 0.175}
+      - {x: 0.10265293, y: 0.1643878}
       - {x: -0.056072045, y: 0.16127257}
-      - {x: -0.13, y: -0.005}
-      - {x: -0.19999999, y: -0.055}
-      - {x: -0.15591069, y: -0.30001584}
-      - {x: 0.14381257, y: -0.30033782}
+      - {x: -0.09683686, y: -0.018265247}
+      - {x: -0.1177557, y: -0.08285699}
+      - {x: -0.13203315, y: -0.29603627}
+      - {x: 0.11090737, y: -0.29610446}
 --- !u!95 &95177924580855768
 Animator:
   serializedVersion: 3

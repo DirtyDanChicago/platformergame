@@ -130,6 +130,7 @@ public class MovementScript : MonoBehaviour
 
         Debug.Log("Is On Ground?: " + isOnGround);
 
+        //Changes from run to jump if in the air.
         if(isOnGround == true)
         {
             myAnimator.SetBool("onground", true);
