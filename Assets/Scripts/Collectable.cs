@@ -7,6 +7,7 @@ public class Collectable : MonoBehaviour
     private AudioSource pickUp;
     private SpriteRenderer carrot;
     private BoxCollider2D carrotCollider;
+    private static int carrotCount = 0;
 
     private void Start()
     {
@@ -19,14 +20,17 @@ public class Collectable : MonoBehaviour
     {
 
         if (collision.gameObject.CompareTag("Player"))
-        {          
+        {
+            carrotCount++;
+            Debug.Log("Carrots Collected: " + carrotCount);
+
             pickUp.Play();
 
-            carrot.enabled = false;
-
             carrotCollider.enabled = false;
-
+            carrot.enabled = false;
+            
             Destroy(gameObject, pickUp.clip.length);
+            
         }
     }
 }
