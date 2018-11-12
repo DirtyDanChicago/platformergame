@@ -8,6 +8,7 @@ public class Spike : MonoBehaviour
   
     private AudioSource audioSource;
 
+ 
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Spike : MonoBehaviour
             player.Respawn();
 
             audioSource.Play();
+
+
 
 
         }

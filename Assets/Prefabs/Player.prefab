@@ -37,11 +37,12 @@ GameObject:
   - component: {fileID: 4584027427823946}
   - component: {fileID: 212442453302616984}
   - component: {fileID: 50367569590640794}
-  - component: {fileID: 61202607817651794}
   - component: {fileID: 58471363653522508}
   - component: {fileID: 114542912974941350}
+  - component: {fileID: 60296105278047622}
+  - component: {fileID: 95177924580855768}
   m_Layer: 9
-  m_Name: SquareBoy
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +54,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.47, y: 1.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.950003, y: 2.2861, z: 0}
+  m_LocalScale: {x: 5, y: 5.013428, z: 5}
   m_Children:
   - {fileID: 4906071517556198}
   m_Father: {fileID: 0}
@@ -108,7 +109,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.16
 --- !u!58 &58969339395474680
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -123,16 +124,16 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!61 &61202607817651794
-BoxCollider2D:
+  m_Radius: 0.2
+--- !u!60 &60296105278047622
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c63764a0e9d92074dae542298288a4de, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -140,15 +141,42 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.59}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.13551044, y: -0.19234693}
+      - {x: 0.14954777, y: -0.04765301}
+      - {x: 0.13717175, y: 0.08969388}
+      - {x: 0.13, y: 0.16499999}
+      - {x: 0.10265293, y: 0.1643878}
+      - {x: -0.056072045, y: 0.16127257}
+      - {x: -0.09683686, y: -0.018265247}
+      - {x: -0.1177557, y: -0.08285699}
+      - {x: -0.13203315, y: -0.29603627}
+      - {x: 0.11090737, y: -0.29610446}
+--- !u!95 &95177924580855768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966655682283470}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 047b9be8cbf3b904cb947f28ced01f07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114542912974941350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +192,7 @@ MonoBehaviour:
   jumpForce: 14
   accelerationForce: 20
   maxSpeed: 60
-  playerGroundCollider: {fileID: 61202607817651794}
+  playerGroundCollider: {fileID: 60296105278047622}
   playerMovingPhysicsMaterial: {fileID: 6200000, guid: 5e88bd0851b858e41b2b1b2527f2afdd,
     type: 2}
   playerStoppingPhysicsMaterial: {fileID: 6200000, guid: c63764a0e9d92074dae542298288a4de,
@@ -219,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 280fb374dfeacc243adfa784375e848a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71b76487688711f4d8f7590759650f18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

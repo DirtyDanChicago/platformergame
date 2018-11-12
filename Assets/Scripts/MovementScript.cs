@@ -13,6 +13,7 @@ public class MovementScript : MonoBehaviour
 	[SerializeField]
 	private Rigidbody2D myRigidBody;
 
+    //Jump's force.
     [SerializeField]
     private float jumpForce = 10;
 
@@ -24,22 +25,32 @@ public class MovementScript : MonoBehaviour
     [SerializeField]
     private float maxSpeed = 5;
 
+    //Player ground collider.
     [SerializeField]
     private Collider2D playerGroundCollider;
 
+    //Moving, and stopped physics materials.
     [SerializeField]
     private PhysicsMaterial2D playerMovingPhysicsMaterial, playerStoppingPhysicsMaterial;
 
+    //Ground detection.
     [SerializeField]
     private Collider2D groundDetectTrigger;
 
+    //Ground detection filters.
     [SerializeField]
     private ContactFilter2D groundContactFilter;
 
+    //Ground detection results.
     private Collider2D[] groundHitDetectionResults = new Collider2D[16];
 
+    //Animator.
+    private Animator myAnimator;
+
+    //Ground detect variable.
     private bool isOnGround;
 
+    //Direction variable.
     private bool facingRight = true;
 
     //Horizontal, and vertical input variables.
@@ -48,7 +59,12 @@ public class MovementScript : MonoBehaviour
     //Keeps track of checkpoint
     private Checkpoint currentCheckpoint;
 
-	private void Update()
+    private void Start()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
+
+    private void Update()
 	{
         //Stops the rotation.
         Vector3 currentRotation = transform.localEulerAngles;
@@ -84,6 +100,7 @@ public class MovementScript : MonoBehaviour
 
     }
 
+    //Changes physics material whether or not the player is moving or staying still.
     private void UpdatePhysicsMaterial()
     {
         if (Mathf.Abs(horizontalInput) > 0)
@@ -97,6 +114,7 @@ public class MovementScript : MonoBehaviour
         }
     }
 
+    //Mirrors the character based on movement direction.
     private void Flip()
     {
         facingRight = !facingRight;
@@ -104,18 +122,30 @@ public class MovementScript : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
+    
+    //Checks if the player is on the ground.
     private void UpdateIsOnGround()
     {
         isOnGround = groundDetectTrigger.OverlapCollider(groundContactFilter, groundHitDetectionResults) > 0;
 
-        //Debug.Log("Is On Ground?: " + isOnGround);
+        Debug.Log("Is On Ground?: " + isOnGround);
+
+        //Changes from run to jump if in the air.
+        if(isOnGround == true)
+        {
+            myAnimator.SetBool("onground", true);
+        }
+        else
+        {
+            myAnimator.SetBool("onground", false);
+        }
     }
 
-
+    //Gets horizontal movement input.
     private void UpdateHorizontalMovement()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+    
     }
 
     //Movement function.
@@ -129,18 +159,23 @@ public class MovementScript : MonoBehaviour
 
         myRigidBody.velocity = clampedVelocity;
 
-	}
+        myAnimator.SetFloat("speed", Mathf.Abs(horizontalInput));
+
+    }
 
 
     //Jump function.
     private void HandleJumpInput()
     {
+        
         if (Input.GetButtonDown("Jump") && isOnGround)
         {
             myRigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+      
     }
 
+    //Respawns player.
     public void Respawn()
     {
 
@@ -158,6 +193,7 @@ public class MovementScript : MonoBehaviour
        
     }
 
+    //Sets player's spawnpoint.
     public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
     {
         if (currentCheckpoint != null)

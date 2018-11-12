@@ -18,9 +18,9 @@ TagManager:
   - Door
   - 
   - 
-  - 
-  - 
-  - 
+  - Foreground
+  - Midground
+  - Background
   - 
   - 
   - 
@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3711726407
+    locked: 0
+  - name: Midground
+    uniqueID: 344644943
+    locked: 0
+  - name: Foreground
+    uniqueID: 3425028287
+    locked: 0
   - name: Door
     uniqueID: 3028755411
     locked: 0
