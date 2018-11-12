@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212481891419860122}
   - component: {fileID: 61464375456940602}
   - component: {fileID: 95414995653749366}
+  - component: {fileID: 114264377097672496}
   m_Layer: 0
   m_Name: carrot
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +86,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114264377097672496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563545368207702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f624df14aa11a7644831953d9c223500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212481891419860122
 SpriteRenderer:
   m_ObjectHideFlags: 1
