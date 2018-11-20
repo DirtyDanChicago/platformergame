@@ -54,9 +54,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.950003, y: 2.2861, z: 0}
-  m_LocalScale: {x: 5, y: 5.013428, z: 5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.11, y: -6.7, z: 5.4}
+  m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children:
   - {fileID: 4906071517556198}
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0
-  m_GravityScale: 1.65
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: c63764a0e9d92074dae542298288a4de, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -107,9 +107,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.22}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.125
 --- !u!58 &58969339395474680
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -189,9 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 50367569590640794}
-  jumpForce: 14
-  accelerationForce: 20
-  maxSpeed: 60
+  jumpForce: 21
+  accelerationForce: 25
+  maxSpeed: 70
   playerGroundCollider: {fileID: 60296105278047622}
   playerMovingPhysicsMaterial: {fileID: 6200000, guid: 5e88bd0851b858e41b2b1b2527f2afdd,
     type: 2}
