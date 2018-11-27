@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 //Daniel Dababneh Platformer Game
@@ -41,6 +42,15 @@ public class MovementScript : MonoBehaviour
     [SerializeField]
     private ContactFilter2D groundContactFilter;
 
+    //Player's health.
+    [SerializeField]
+    int health;
+
+    //Text variables for winning, and for health.
+    public Text healthText;
+    public Text winText;
+
+
     //Ground detection results.
     private Collider2D[] groundHitDetectionResults = new Collider2D[16];
 
@@ -62,6 +72,9 @@ public class MovementScript : MonoBehaviour
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
+
+        healthText.text = "Health: " + health.ToString();
+
     }
 
     private void Update()
@@ -203,5 +216,19 @@ public class MovementScript : MonoBehaviour
         currentCheckpoint.SetIsActivated(true);
     }
 
+    public void Injury()
+    {
+        health -= 1;
+
+        healthText.text = "Health: " + health.ToString();
+
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      
+        }
+
+    }
 
 }

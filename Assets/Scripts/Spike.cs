@@ -6,29 +6,24 @@ using UnityEngine.SceneManagement;
 public class Spike : MonoBehaviour  
 {
   
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
  
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+        MovementScript player = collision.GetComponent<MovementScript>();
+
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered the trigger.");          
+            Debug.Log("Player entered the trigger.");
 
-            MovementScript player = collision.GetComponent<MovementScript>();
-
-            player.Respawn();
-
-            audioSource.Play();
-
-
+            player.Injury();
 
 
         }

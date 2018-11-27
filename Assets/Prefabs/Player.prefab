@@ -212,6 +212,9 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  health: 3
+  healthText: {fileID: 0}
+  winText: {fileID: 0}
 --- !u!212 &212442453302616984
 SpriteRenderer:
   m_ObjectHideFlags: 1
