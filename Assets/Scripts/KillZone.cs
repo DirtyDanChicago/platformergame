@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
+    [SerializeField]
+    private float zoneSpeed = 10f;
 
+    private void FixedUpdate()
+    {
+        transform.Translate(zoneSpeed * Time.deltaTime, 0, 0);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

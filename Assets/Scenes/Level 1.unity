@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1739632631}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 12
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -433,7 +433,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 58311632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0343533, y: -3.2108412, z: -4.6}
+  m_LocalPosition: {x: 4.160719, y: -1.210907, z: -4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 352541333}
@@ -11993,7 +11993,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 361667375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.2, y: -1.6, z: 0}
+  m_LocalPosition: {x: -45.3, y: -1.6, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12028,6 +12028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddc51267c018f5459cf526214004c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneSpeed: 10
 --- !u!1 &707976842
 GameObject:
   m_ObjectHideFlags: 0
@@ -15322,11 +15323,6 @@ Prefab:
     - target: {fileID: 4584027427823946, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114542912974941350, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: healthText
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}

@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.11, y: -6.7, z: 5.4}
+  m_LocalPosition: {x: -23.4, y: -6.7, z: 5.4}
   m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children:
   - {fileID: 4906071517556198}
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 50367569590640794}
-  jumpForce: 21
+  jumpForce: 22
   accelerationForce: 25
   maxSpeed: 70
   playerGroundCollider: {fileID: 60296105278047622}
@@ -212,8 +212,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  health: 3
-  healthText: {fileID: 0}
   winText: {fileID: 0}
 --- !u!212 &212442453302616984
 SpriteRenderer:
