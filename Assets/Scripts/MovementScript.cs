@@ -42,12 +42,8 @@ public class MovementScript : MonoBehaviour
     [SerializeField]
     private ContactFilter2D groundContactFilter;
 
-    //Player's health.
-    [SerializeField]
-    int health;
-
-    //Text variables for winning, and for health.
-    public Text healthText;
+  
+    //Text letting you know to move on.
     public Text winText;
 
 
@@ -72,8 +68,6 @@ public class MovementScript : MonoBehaviour
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
-
-        healthText.text = "Health: " + health.ToString();
 
     }
 
@@ -218,17 +212,9 @@ public class MovementScript : MonoBehaviour
 
     public void Injury()
     {
-        health -= 1;
-
-        healthText.text = "Health: " + health.ToString();
-
-
-        if (health <= 0)
-        {
+  
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-      
-        }
-
+     
     }
 
 }
