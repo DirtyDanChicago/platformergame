@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 212442453302616984}
   - component: {fileID: 50367569590640794}
   - component: {fileID: 58471363653522508}
-  - component: {fileID: 114542912974941350}
   - component: {fileID: 60296105278047622}
+  - component: {fileID: 114542912974941350}
   - component: {fileID: 95177924580855768}
   m_Layer: 9
   m_Name: Player

@@ -96,14 +96,8 @@ public class MovementScript : MonoBehaviour
         //Calls Move function.
         Move();
 
-        if (horizontalInput > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if(horizontalInput < 0 && facingRight)
-        {
-            Flip();
-        }
+        UpdateFlip();
+        
 
     }
 
@@ -128,6 +122,18 @@ public class MovementScript : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void UpdateFlip()
+    {
+        if (horizontalInput > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (horizontalInput < 0 && facingRight)
+        {
+            Flip();
+        }
     }
     
     //Checks if the player is on the ground.
