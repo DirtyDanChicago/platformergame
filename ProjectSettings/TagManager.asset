@@ -49,6 +49,9 @@ TagManager:
   - name: Foreground
     uniqueID: 3425028287
     locked: 0
+  - name: Tombstone
+    uniqueID: 3739360159
+    locked: 0
   - name: Door
     uniqueID: 3028755411
     locked: 0
