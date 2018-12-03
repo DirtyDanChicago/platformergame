@@ -65,9 +65,13 @@ public class MovementScript : MonoBehaviour
     //Keeps track of checkpoint
     private Checkpoint currentCheckpoint;
 
+    //Death Audio
+    private AudioSource audioSource;
+
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
+
 
     }
 

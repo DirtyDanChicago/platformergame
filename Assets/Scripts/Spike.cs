@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class Spike : MonoBehaviour  
 {
   
-    //private AudioSource audioSource;
+    private AudioSource audioSource;
 
- 
+
 
     private void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +26,7 @@ public class Spike : MonoBehaviour
 
             player.Respawn();
 
+            audioSource.Play();
 
         }
         else

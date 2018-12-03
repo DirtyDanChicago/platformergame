@@ -8,10 +8,16 @@ public class KillZone : MonoBehaviour
     private float zoneSpeed = 10f;
     public static Vector3 originalPos;
 
+    private AudioSource audioSource;
+
+
     public void Start()
     {
         //Gets the ghost's original position.
         KillZone.originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void FixedUpdate()
@@ -24,13 +30,15 @@ public class KillZone : MonoBehaviour
     {
         MovementScript player = collision.GetComponent<MovementScript>();
 
-      
+
         //Checks for colliion with player to kill them.
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player entered the trigger.");
 
             player.Respawn();
+
+            audioSource.Play();
 
             Reset();
 
@@ -45,6 +53,8 @@ public class KillZone : MonoBehaviour
     {
         //Resets ghost position on player death.
         gameObject.transform.position = originalPos;
+
+        transform.Translate(zoneSpeed * Time.deltaTime, 0, 0);
 
     }
 
