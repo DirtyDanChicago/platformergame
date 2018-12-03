@@ -198,6 +198,8 @@ public class MovementScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
             Debug.Log("The player died and respawed.");
+
+            
         }
         else
         {
