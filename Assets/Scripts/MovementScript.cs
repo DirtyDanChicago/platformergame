@@ -124,6 +124,7 @@ public class MovementScript : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    //Provides function for Update.
     private void UpdateFlip()
     {
         if (horizontalInput > 0 && !facingRight)
@@ -216,11 +217,6 @@ public class MovementScript : MonoBehaviour
         currentCheckpoint.SetIsActivated(true);
     }
 
-    public void Injury()
-    {
-  
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-     
-    }
+    
 
 }

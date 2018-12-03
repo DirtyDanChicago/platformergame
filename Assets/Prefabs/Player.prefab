@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1966655682283470}
   m_IsPrefabParent: 1
+--- !u!1 &1544534580109512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4627834525028376}
+  - component: {fileID: 61517172258575128}
+  m_Layer: 0
+  m_Name: PeopleDetect
+  m_TagString: PeopleDetect
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1847605179322532
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906071517556198}
   - component: {fileID: 58969339395474680}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 'DoorDetect '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,9 +53,9 @@ GameObject:
   - component: {fileID: 4584027427823946}
   - component: {fileID: 212442453302616984}
   - component: {fileID: 50367569590640794}
+  - component: {fileID: 114542912974941350}
   - component: {fileID: 58471363653522508}
   - component: {fileID: 60296105278047622}
-  - component: {fileID: 114542912974941350}
   - component: {fileID: 95177924580855768}
   m_Layer: 9
   m_Name: Player
@@ -55,12 +71,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4, y: -6.7, z: 5.4}
+  m_LocalPosition: {x: -23.4, y: -6.691, z: 5.4}
   m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children:
   - {fileID: 4906071517556198}
+  - {fileID: 4627834525028376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4627834525028376
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544534580109512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.052, z: 0}
+  m_LocalScale: {x: 0.22875002, y: 0.45124936, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 4584027427823946}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4906071517556198
 Transform:
@@ -70,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1847605179322532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1, z: 1}
+  m_LocalScale: {x: -0.14, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4584027427823946}
   m_RootOrder: 0
@@ -89,9 +119,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0
-  m_GravityScale: 2.35
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: c63764a0e9d92074dae542298288a4de, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -122,9 +152,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07335364, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.12664634
 --- !u!60 &60296105278047622
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -159,6 +189,31 @@ PolygonCollider2D:
       - {x: -0.1177557, y: -0.08285699}
       - {x: -0.13203315, y: -0.29603627}
       - {x: 0.11090737, y: -0.29610446}
+--- !u!61 &61517172258575128
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544534580109512}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &95177924580855768
 Animator:
   serializedVersion: 3
@@ -189,8 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 50367569590640794}
-  jumpForce: 22
-  accelerationForce: 25
+  jumpForce: 35
+  accelerationForce: 35
   maxSpeed: 70
   playerGroundCollider: {fileID: 60296105278047622}
   playerMovingPhysicsMaterial: {fileID: 6200000, guid: 5e88bd0851b858e41b2b1b2527f2afdd,

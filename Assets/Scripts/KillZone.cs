@@ -20,8 +20,7 @@ public class KillZone : MonoBehaviour
         {
             Debug.Log("Player entered the trigger.");
 
-            player.Injury();
-
+            player.Respawn();
 
         }
         else

@@ -23,7 +23,7 @@ public class Spike : MonoBehaviour
         {
             Debug.Log("Player entered the trigger.");
 
-            player.Injury();
+            player.Respawn();
 
 
         }
