@@ -321,7 +321,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46306766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4, y: -6.691, z: -4.6}
+  m_LocalPosition: {x: -23.4, y: -7.4, z: -4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2126059873}
@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 58311632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0829067, y: -1.2109079, z: -4.6}
+  m_LocalPosition: {x: 1.0829067, y: -1.2109084, z: -4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 352541333}
@@ -11875,7 +11875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.1
+      value: 10.44
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12169,6 +12169,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114457638305985884, guid: fa9d3e0e051d74e438f6643730d5b0b8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa9d3e0e051d74e438f6643730d5b0b8, type: 2}
   m_IsPrefabParent: 0
@@ -12259,7 +12264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4584027427823946, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.691
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 4584027427823946, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12285,8 +12290,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 82495672912329194, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &892750143
@@ -14574,7 +14578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.19
+      value: 5.46
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14701,7 +14705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.1
+      value: 10.55
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23957,7 +23961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.17
+      value: 4.61
       objectReference: {fileID: 0}
     - target: {fileID: 4798257537336814, guid: bb550d0474ec4f54182a9f503bec738e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23995,9 +23999,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1907532741}
   - component: {fileID: 1907532740}
+  - component: {fileID: 1907532742}
   m_Layer: 0
   m_Name: wagon
-  m_TagString: Untagged
+  m_TagString: Wagon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24060,6 +24065,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907532742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907532739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b96e1709b735348b00b8e16033e667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: 
 --- !u!1 &1969205673
 GameObject:
   m_ObjectHideFlags: 0

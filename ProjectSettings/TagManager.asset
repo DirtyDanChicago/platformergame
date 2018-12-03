@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - PeopleDetect
+  - Wagon
   layers:
   - Default
   - TransparentFX

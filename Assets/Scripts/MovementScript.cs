@@ -68,20 +68,25 @@ public class MovementScript : MonoBehaviour
     //Death Audio
     private AudioSource audioSource;
 
+    private GameObject wagon;
+
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
 
+        wagon = GameObject.FindGameObjectWithTag("Wagon");
+
+        wagon.gameObject.SetActive(false);
 
     }
 
     private void Update()
-	{
+    {
         //Stops the rotation.
         Vector3 currentRotation = transform.localEulerAngles;
         currentRotation.z = 0;
         transform.localEulerAngles = currentRotation;
-        
+
         //On Ground Update.
         UpdateIsOnGround();
 
@@ -90,7 +95,9 @@ public class MovementScript : MonoBehaviour
 
         //Jump Input Function.
         HandleJumpInput();
-	}
+
+        OpenExit();
+    }
 
 	//Fixed update for movement.
 	void FixedUpdate()
@@ -223,6 +230,11 @@ public class MovementScript : MonoBehaviour
         currentCheckpoint.SetIsActivated(true);
     }
 
-    
+    private void OpenExit()
+    {
+        if (Collectable.peopleCount >= 2)
+        wagon.gameObject.SetActive(true);
+        
+    }
 
 }
