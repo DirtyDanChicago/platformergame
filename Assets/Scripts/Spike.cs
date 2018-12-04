@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Spike : MonoBehaviour  
 {
-  
+
+    [SerializeField]
+    public KillZone killZone;
+
     private AudioSource audioSource;
 
-
+ 
 
     private void Start()
     {
@@ -28,6 +31,7 @@ public class Spike : MonoBehaviour
 
             audioSource.Play();
 
+            killZone.GhostReset();
         }
         else
         {

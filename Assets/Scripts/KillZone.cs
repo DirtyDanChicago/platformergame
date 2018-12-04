@@ -40,7 +40,7 @@ public class KillZone : MonoBehaviour
 
             audioSource.Play();
 
-            Reset();
+            GhostReset();
 
         }
         else
@@ -49,7 +49,7 @@ public class KillZone : MonoBehaviour
         }
     }
 
-    private void Reset()
+    public void GhostReset()
     {
         //Resets ghost position on player death.
         gameObject.transform.position = originalPos;
