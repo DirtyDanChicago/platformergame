@@ -56,6 +56,12 @@ TagManager:
   - name: Door
     uniqueID: 3028755411
     locked: 0
+  - name: Ground 2 Background
+    uniqueID: 3507790531
+    locked: 0
+  - name: Ground2
+    uniqueID: 293988879
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

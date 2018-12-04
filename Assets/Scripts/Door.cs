@@ -45,6 +45,10 @@ public class Door : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(sceneToLoad);
+
+            Debug.Log("Player escaped.");
+
+            Collectable.peopleCount = 0;
         }
     }
 

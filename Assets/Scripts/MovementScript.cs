@@ -244,6 +244,9 @@ public class MovementScript : MonoBehaviour
             wagon.gameObject.SetActive(true);
 
             winText.gameObject.SetActive(true);
+
+
+            
         }
             
 
