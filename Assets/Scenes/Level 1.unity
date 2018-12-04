@@ -12362,6 +12362,26 @@ Prefab:
       propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 60296105278047622, guid: b7d62e02472675d4d9e61f95079d90ac,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: 0.13795117
+      objectReference: {fileID: 0}
+    - target: {fileID: 60296105278047622, guid: b7d62e02472675d4d9e61f95079d90ac,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -0.045544486
+      objectReference: {fileID: 0}
+    - target: {fileID: 50367569590640794, guid: b7d62e02472675d4d9e61f95079d90ac,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114542912974941350, guid: b7d62e02472675d4d9e61f95079d90ac,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
   m_IsPrefabParent: 0
