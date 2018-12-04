@@ -42,9 +42,12 @@ public class MovementScript : MonoBehaviour
     [SerializeField]
     private ContactFilter2D groundContactFilter;
 
-  
+
     //Text letting you know to move on.
     public Text winText;
+
+    //Counts how many people you've saved.
+    public Text peopleCountText;
 
 
     //Ground detection results.
@@ -78,6 +81,8 @@ public class MovementScript : MonoBehaviour
 
         wagon.gameObject.SetActive(false);
 
+        winText.gameObject.SetActive(false);
+
     }
 
     private void Update()
@@ -95,6 +100,8 @@ public class MovementScript : MonoBehaviour
 
         //Jump Input Function.
         HandleJumpInput();
+
+        peopleCountText.text = "People Saved: " + Collectable.peopleCount;
 
         OpenExit();
     }
@@ -233,8 +240,13 @@ public class MovementScript : MonoBehaviour
     private void OpenExit()
     {
         if (Collectable.peopleCount >= 2)
-        wagon.gameObject.SetActive(true);
-        
+        {
+            wagon.gameObject.SetActive(true);
+
+            winText.gameObject.SetActive(true);
+        }
+            
+
     }
 
 }
