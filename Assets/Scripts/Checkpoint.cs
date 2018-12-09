@@ -25,6 +25,7 @@ public class Checkpoint : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //Animates checkpoint.
     private void Update()
     {
         UpdateRotation();
@@ -32,6 +33,7 @@ public class Checkpoint : MonoBehaviour
         UpdatedColor();
     }
 
+    //Changes color when activated.
     private void UpdatedColor()
     {
         Color color = inactiveColor;
@@ -44,6 +46,7 @@ public class Checkpoint : MonoBehaviour
         spriteRenderer.color = color;
     }
 
+    //Shrinks when activated.
     private void UpdatedScale()
     {
         float scale = inactiveScale;
@@ -57,6 +60,7 @@ public class Checkpoint : MonoBehaviour
         transform.localScale = Vector3.one * scale;
     }
 
+    //Rotates when activated.
     private void UpdateRotation()
     {
         float rotationSpeed = inactiveSpeed;

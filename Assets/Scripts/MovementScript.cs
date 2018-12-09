@@ -213,6 +213,7 @@ public class MovementScript : MonoBehaviour
     public void Respawn()
     {
 
+        //Checks for respawn point.
         if (currentCheckpoint == null)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+        //Goes to next level when player hits door.
         if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(sceneToLoad);
