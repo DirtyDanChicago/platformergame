@@ -220,12 +220,14 @@ public class MovementScript : MonoBehaviour
 
             Debug.Log("The player died and respawed.");
 
-            //myAnimator.SetBool("hurt", true);
+            myAnimator.SetBool("hurt", true);
         }
         else
         {
             myRigidBody.velocity = Vector2.zero;
             transform.position = currentCheckpoint.transform.position;
+
+            myAnimator.SetBool("hurt", true);
         }
        
     }
