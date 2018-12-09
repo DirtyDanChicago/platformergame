@@ -71,6 +71,7 @@ public class MovementScript : MonoBehaviour
     //Death Audio
     private AudioSource audioSource;
 
+    //Calls wagon object.
     private GameObject wagon;
 
     private void Start()
@@ -83,6 +84,7 @@ public class MovementScript : MonoBehaviour
 
         winText.gameObject.SetActive(false);
 
+        myAnimator.SetBool("hurt", false);
     }
 
     private void Update()
@@ -217,7 +219,7 @@ public class MovementScript : MonoBehaviour
 
             Debug.Log("The player died and respawed.");
 
-            
+            //myAnimator.SetBool("hurt", true);
         }
         else
         {
@@ -237,6 +239,7 @@ public class MovementScript : MonoBehaviour
         currentCheckpoint.SetIsActivated(true);
     }
 
+    //Activates the wagon on win condition.
     private void OpenExit()
     {
         if (Collectable.peopleCount >= 2)
@@ -244,12 +247,9 @@ public class MovementScript : MonoBehaviour
             wagon.gameObject.SetActive(true);
 
             winText.gameObject.SetActive(true);
-
-
             
         }
             
-
     }
 
 }
