@@ -12357,46 +12357,6 @@ Prefab:
       propertyPath: peopleCountText
       value: 
       objectReference: {fileID: 894919189}
-    - target: {fileID: 95177924580855768, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50367569590640794, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 60296105278047622, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: 0.13795117
-      objectReference: {fileID: 0}
-    - target: {fileID: 60296105278047622, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: -0.045544486
-      objectReference: {fileID: 0}
-    - target: {fileID: 50367569590640794, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114542912974941350, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: maxSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114542912974941350, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: jumpForce
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114542912974941350, guid: b7d62e02472675d4d9e61f95079d90ac,
-        type: 2}
-      propertyPath: accelerationForce
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d62e02472675d4d9e61f95079d90ac, type: 2}
   m_IsPrefabParent: 0

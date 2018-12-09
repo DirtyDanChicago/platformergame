@@ -119,9 +119,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0
-  m_GravityScale: 5
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: c63764a0e9d92074dae542298288a4de, type: 2}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -180,7 +180,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.13551044, y: -0.19234693}
-      - {x: 0.14954777, y: -0.04765301}
+      - {x: 0.13795117, y: -0.045544486}
       - {x: 0.13717175, y: 0.08969388}
       - {x: 0.13, y: 0.16499999}
       - {x: 0.10265293, y: 0.1643878}
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 50367569590640794}
-  jumpForce: 35
-  accelerationForce: 35
-  maxSpeed: 70
+  jumpForce: 25
+  accelerationForce: 25
+  maxSpeed: 40
   playerGroundCollider: {fileID: 60296105278047622}
   playerMovingPhysicsMaterial: {fileID: 6200000, guid: 5e88bd0851b858e41b2b1b2527f2afdd,
     type: 2}
