@@ -31,6 +31,7 @@ public class Checkpoint : MonoBehaviour
         UpdateRotation();
         UpdatedScale();
         UpdatedColor();
+       
     }
 
     //Changes color when activated.

@@ -237,7 +237,11 @@ public class MovementScript : MonoBehaviour
             {
                 Respawn();
 
+                isDead = false;
+
                 deathText.enabled = false;
+
+                myAnimator.SetBool("hurt", false);
             }
         }
     }
@@ -245,6 +249,11 @@ public class MovementScript : MonoBehaviour
     //Respawns player.
     public void Respawn()
     {
+        myAnimator.SetBool("hurt", false);
+
+        isDead = false;
+
+        myRigidBody.constraints = RigidbodyConstraints2D.None;
 
         //Checks for respawn point.
         if (currentCheckpoint == null)
@@ -253,14 +262,14 @@ public class MovementScript : MonoBehaviour
 
             Debug.Log("The player died and respawed.");
 
-            myAnimator.SetBool("hurt", false);
+           
         }
         else
         {
             myRigidBody.velocity = Vector2.zero;
             transform.position = currentCheckpoint.transform.position;
 
-            myAnimator.SetBool("hurt", false);
+           
         }
        
     }
