@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 //Daniel Dababneh Platformer Game
 
+//Thanks to Ami Patel for the death animation assistance.
 
 public class MovementScript : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class MovementScript : MonoBehaviour
     //Counts how many people you've saved.
     public Text peopleCountText;
 
+    public Text deathText;
 
     //Ground detection results.
     private Collider2D[] groundHitDetectionResults = new Collider2D[16];
@@ -74,6 +76,8 @@ public class MovementScript : MonoBehaviour
     //Calls wagon object.
     private GameObject wagon;
 
+    private bool isDead;
+
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
@@ -83,6 +87,8 @@ public class MovementScript : MonoBehaviour
         wagon.gameObject.SetActive(false);
 
         winText.gameObject.SetActive(false);
+
+        deathText.gameObject.SetActive(false);
 
         myAnimator.SetBool("hurt", false);
     }
@@ -102,6 +108,8 @@ public class MovementScript : MonoBehaviour
 
         //Jump Input Function.
         HandleJumpInput();
+
+        CheckForRespawn();
 
         peopleCountText.text = "People Saved: " + Collectable.peopleCount;
 
@@ -209,6 +217,31 @@ public class MovementScript : MonoBehaviour
       
     }
 
+    //Player is dead state.
+    public void Death()
+    {
+        isDead = true;
+        myAnimator.SetBool("hurt", true);
+        deathText.gameObject.SetActive(true);
+       
+    }
+
+    //Checks for players respawn input. R is respawn.
+    public void CheckForRespawn()
+    {
+        if (isDead)
+        {
+            myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            if (Input.GetButtonDown("Respawn"))
+            {
+                Respawn();
+
+                deathText.enabled = false;
+            }
+        }
+    }
+
     //Respawns player.
     public void Respawn()
     {
@@ -220,14 +253,14 @@ public class MovementScript : MonoBehaviour
 
             Debug.Log("The player died and respawed.");
 
-            myAnimator.SetBool("hurt", true);
+            myAnimator.SetBool("hurt", false);
         }
         else
         {
             myRigidBody.velocity = Vector2.zero;
             transform.position = currentCheckpoint.transform.position;
 
-            myAnimator.SetBool("hurt", true);
+            myAnimator.SetBool("hurt", false);
         }
        
     }

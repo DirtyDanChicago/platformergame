@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966655682283470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4, y: -7.4, z: 5.4}
+  m_LocalPosition: {x: -23.4, y: -7.99, z: 5.4}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4906071517556198}
@@ -269,6 +269,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   winText: {fileID: 0}
   peopleCountText: {fileID: 0}
+  deathText: {fileID: 0}
 --- !u!212 &212442453302616984
 SpriteRenderer:
   m_ObjectHideFlags: 1

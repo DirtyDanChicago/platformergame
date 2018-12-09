@@ -36,7 +36,7 @@ public class KillZone : MonoBehaviour
         {
             Debug.Log("Player entered the trigger.");
 
-            player.Respawn();
+            player.Death();
 
             audioSource.Play();
 
