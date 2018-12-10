@@ -220,8 +220,7 @@ public class MovementScript : MonoBehaviour
     {
         isDead = true;
         myAnimator.SetBool("hurt", true);
-        deathText.gameObject.SetActive(true);
-       
+      
     }
 
     //Checks for players respawn input. R is respawn.
@@ -230,6 +229,8 @@ public class MovementScript : MonoBehaviour
         if (isDead)
         {
             myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            deathText.gameObject.SetActive(true);
 
             if (Input.GetButtonDown("Respawn"))
             {
