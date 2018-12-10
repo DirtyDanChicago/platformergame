@@ -9,18 +9,13 @@ public class Collectable : MonoBehaviour
     private BoxCollider2D peopleCollider;
     public static int peopleCount = 0;
 
-
-
     private void Start()
     {
         pickUp = GetComponent<AudioSource>();
         people = GetComponent<SpriteRenderer>();
         peopleCollider = GetComponent<BoxCollider2D>();
-
-        
+       
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,10 +33,6 @@ public class Collectable : MonoBehaviour
             Destroy(gameObject, pickUp.clip.length);
 
         }
-
-        
-    }
-
-  
-
+     
+    }  
 }

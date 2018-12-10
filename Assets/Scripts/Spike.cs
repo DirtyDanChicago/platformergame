@@ -7,16 +7,13 @@ public class Spike : MonoBehaviour
 {
 
     [SerializeField]
-    public KillZone killZone;
+    private KillZone killZone;
 
     private AudioSource audioSource;
-
- 
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,5 +36,4 @@ public class Spike : MonoBehaviour
         }
     }
 
-    
 }

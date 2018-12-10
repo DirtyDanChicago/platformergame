@@ -11,8 +11,9 @@ using UnityEngine.UI;
 
 public class MovementScript : MonoBehaviour
 {
+    #region
     //Rigid body variable. 
-	[SerializeField]
+    [SerializeField]
 	private Rigidbody2D myRigidBody;
 
     //Jump's force.
@@ -42,7 +43,7 @@ public class MovementScript : MonoBehaviour
     //Ground detection filters.
     [SerializeField]
     private ContactFilter2D groundContactFilter;
-
+    #endregion
 
     //Text letting you know to move on.
     public Text winText;
@@ -125,8 +126,6 @@ public class MovementScript : MonoBehaviour
         Move();
 
         UpdateFlip();
-        
-
     }
 
     //Changes physics material whether or not the player is moving or staying still.
@@ -187,7 +186,6 @@ public class MovementScript : MonoBehaviour
     private void UpdateHorizontalMovement()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
-    
     }
 
     //Movement function.
@@ -261,15 +259,12 @@ public class MovementScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
             Debug.Log("The player died and respawed.");
-
-           
         }
         else
         {
             myRigidBody.velocity = Vector2.zero;
-            transform.position = currentCheckpoint.transform.position;
 
-           
+            transform.position = currentCheckpoint.transform.position;         
         }
        
     }
@@ -293,8 +288,6 @@ public class MovementScript : MonoBehaviour
 
             winText.gameObject.SetActive(true);
             
-        }
-            
+        }  
     }
-
 }

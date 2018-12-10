@@ -5,10 +5,10 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     [SerializeField]
-    private float inactiveSpeed = 100, activeSpeed = 200;
+    private float inactiveSpeed, activeSpeed;
 
     [SerializeField]
-    private float inactiveScale = 1, activatedScale = 0.5f;
+    private float inactiveScale, activatedScale;
 
     [SerializeField]
     private Color inactiveColor, activeColor;
@@ -78,12 +78,10 @@ public class Checkpoint : MonoBehaviour
         isActivated = value;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !isActivated)
-        {
-           
+        {     
             Debug.Log("Player entered the checkpoint.");
 
             MovementScript player = collision.GetComponent<MovementScript>();
@@ -92,7 +90,5 @@ public class Checkpoint : MonoBehaviour
 
             audioSource.Play();
         }
-   
     }
-
 }
