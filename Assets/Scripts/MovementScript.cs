@@ -242,14 +242,9 @@ public class MovementScript : MonoBehaviour
 
                 killZone.GhostReset();
 
-                deathText.gameObject.SetActive(false);
-
                 isDead = false;
            
                 myAnimator.SetBool("hurt", false);
-
-                
-
                 
             }
         }
@@ -263,12 +258,13 @@ public class MovementScript : MonoBehaviour
         isDead = false;
 
         myRigidBody.constraints = RigidbodyConstraints2D.None;
-        
 
         //Checks for respawn point.
         if (currentCheckpoint == null)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            CheckForRespawn();
 
             Debug.Log("The player died and respawed.");
 
@@ -278,6 +274,8 @@ public class MovementScript : MonoBehaviour
             myRigidBody.velocity = Vector2.zero;
 
             transform.position = currentCheckpoint.transform.position;
+
+            CheckForRespawn();
 
         }
        
