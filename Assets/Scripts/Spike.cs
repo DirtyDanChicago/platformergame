@@ -24,11 +24,12 @@ public class Spike : MonoBehaviour
         {
             Debug.Log("Player entered the trigger.");
 
+            killZone.GhostReset();
+
             player.Death();
 
             audioSource.Play();
-
-            killZone.GhostReset();
+            
         }
         else
         {

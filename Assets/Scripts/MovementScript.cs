@@ -238,19 +238,17 @@ public class MovementScript : MonoBehaviour
 
             if (Input.GetButtonDown("Respawn"))
             {
-                Respawn(); 
-
-                killZone.GhostReset();
+                Respawn();
 
                 deathText.gameObject.SetActive(false);
 
+                killZone.GhostReset();
+               
                 isDead = false;
            
                 myAnimator.SetBool("hurt", false);
 
-                
-
-                
+                              
             }
         }
     }
