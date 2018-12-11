@@ -43,6 +43,10 @@ public class MovementScript : MonoBehaviour
     //Ground detection filters.
     [SerializeField]
     private ContactFilter2D groundContactFilter;
+
+    [SerializeField]
+    private KillZone killZone;
+
     #endregion
 
     //Text letting you know to move on.
@@ -234,13 +238,19 @@ public class MovementScript : MonoBehaviour
 
             if (Input.GetButtonDown("Respawn"))
             {
-                Respawn();
+                Respawn(); 
+
+                killZone.GhostReset();
+
+                deathText.gameObject.SetActive(false);
 
                 isDead = false;
-
-                deathText.enabled = false;
-
+           
                 myAnimator.SetBool("hurt", false);
+
+                
+
+                
             }
         }
     }
@@ -253,6 +263,7 @@ public class MovementScript : MonoBehaviour
         isDead = false;
 
         myRigidBody.constraints = RigidbodyConstraints2D.None;
+        
 
         //Checks for respawn point.
         if (currentCheckpoint == null)
@@ -260,12 +271,14 @@ public class MovementScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
             Debug.Log("The player died and respawed.");
+
         }
         else
         {
             myRigidBody.velocity = Vector2.zero;
 
-            transform.position = currentCheckpoint.transform.position;         
+            transform.position = currentCheckpoint.transform.position;
+
         }
        
     }
