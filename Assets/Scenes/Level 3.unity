@@ -2648,7 +2648,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4227398668734728, guid: 48ce469e54c7d404b8cef1440ccc3c47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 201.72
+      value: 196.04
       objectReference: {fileID: 0}
     - target: {fileID: 4227398668734728, guid: 48ce469e54c7d404b8cef1440ccc3c47, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2687,6 +2687,11 @@ Prefab:
     - target: {fileID: 1474006414049676, guid: 48ce469e54c7d404b8cef1440ccc3c47, type: 2}
       propertyPath: m_Name
       value: Statue
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496689355122090, guid: 48ce469e54c7d404b8cef1440ccc3c47,
+        type: 2}
+      propertyPath: sceneToLoad
+      value: Ending
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48ce469e54c7d404b8cef1440ccc3c47, type: 2}

@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030517, y: 33}
-  m_SizeDelta: {x: 496.2, y: 223.1}
+  m_AnchoredPosition: {x: -0.000030517, y: 16.01}
+  m_SizeDelta: {x: 496.2, y: 257.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777956153
 MonoBehaviour:
@@ -486,11 +486,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is Ghost Run. Quickly save as many people as you can, and run from
-    the ghost haunting the town. Get to the castle to stop the ghost for good!
-
-
-    Run, jump over spikes, and save as many people as you can. '
+  m_Text: "This is Ghost Run. Quickly save as many people as you can, and run from
+    the ghost haunting the town. Get to the castle to stop the ghost for good!\n\nRun,
+    jump over spikes, and save as many people as you can. \n\nWASD to move, Space
+    to jump."
 --- !u!222 &1777956154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -708,7 +707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 58}
+  m_AnchoredPosition: {x: 0, y: 21}
   m_SizeDelta: {x: 91.4, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2082781759
