@@ -7145,19 +7145,9 @@ CompositeCollider2D:
       - X: 680000000
         Y: 40000000
     - - X: 910000000
-        Y: 39375000
-      - X: 900000000
-        Y: 39375000
-      - X: 900000000
-        Y: 35000000
-      - X: 898124992
-        Y: 34375000
-      - X: 898124992
-        Y: 40000000
-      - X: 893750016
-        Y: 40000000
+        Y: 30000000
       - X: 890000000
-        Y: 38125000
+        Y: 30000000
       - X: 890000000
         Y: 20000000
       - X: 910000000
@@ -7288,6 +7278,7 @@ CompositeCollider2D:
         Y: -60000000
       - X: 1440000000
         Y: -60000000
+<<<<<<< HEAD
     - - X: 2070000000
         Y: -120000000
       - X: -150000000
@@ -7296,6 +7287,16 @@ CompositeCollider2D:
         Y: -130000000
       - X: 2070000000
         Y: -130000000
+=======
+    - - X: 450000000
+        Y: -50000000
+      - X: 430000000
+        Y: -50000000
+      - X: 430000000
+        Y: -60000000
+      - X: 450000000
+        Y: -60000000
+>>>>>>> parent of a407018... Tried to fix level 3
   m_CompositePaths:
     m_Paths:
     - - {x: 8, y: 11.9375}
@@ -7361,13 +7362,8 @@ CompositeCollider2D:
       - {x: 66, y: 5.8125}
       - {x: 66, y: 4}
       - {x: 68, y: 4}
-    - - {x: 91, y: 3.9375}
-      - {x: 90, y: 3.9375}
-      - {x: 90, y: 3.5}
-      - {x: 89.8125, y: 3.4375}
-      - {x: 89.8125, y: 4}
-      - {x: 89.375, y: 4}
-      - {x: 89, y: 3.8125}
+    - - {x: 91, y: 3}
+      - {x: 89, y: 3}
       - {x: 89, y: 2}
       - {x: 91, y: 2}
     - - {x: 155, y: 2.9375}
@@ -7433,10 +7429,17 @@ CompositeCollider2D:
       - {x: 142, y: -4.1875}
       - {x: 142, y: -6}
       - {x: 144, y: -6}
+<<<<<<< HEAD
     - - {x: 207, y: -12}
       - {x: -15, y: -12}
       - {x: -15, y: -13}
       - {x: 207, y: -13}
+=======
+    - - {x: 45, y: -5}
+      - {x: 43, y: -5}
+      - {x: 43, y: -6}
+      - {x: 45, y: -6}
+>>>>>>> parent of a407018... Tried to fix level 3
   m_VertexDistance: 0.0005
 --- !u!50 &2056250827
 Rigidbody2D:
@@ -9591,24 +9594,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 43, y: -5, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 44, y: -5, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 104, y: -5, z: 0}
     second:
       m_TileIndex: 2
@@ -9781,24 +9766,6 @@ Tilemap:
       m_TileFlags: 1
       m_ColliderType: 1
   - first: {x: 154, y: 2, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 89, y: 3, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 90, y: 3, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -10061,9 +10028,9 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 15
+  - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 99eea8ca53df5e943bab23d30bfad2a8, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 5d0bdb0aaf88d1c439a406ae2650638b, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 80e72d7ddec6fac479007f4682db29f8, type: 2}
@@ -10074,9 +10041,9 @@ Tilemap:
   - m_RefCount: 104
     m_Data: {fileID: 11400000, guid: ab70be996df707d40a78ad0beff9468f, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 15
+  - m_RefCount: 13
     m_Data: {fileID: 21300054, guid: 0a39a5b0a49bd00408dd39dfebb16b6a, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 13
     m_Data: {fileID: 21300052, guid: 0a39a5b0a49bd00408dd39dfebb16b6a, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: 21300406, guid: e85a717ecd0762f4082e33f01cd80a12, type: 3}
@@ -10087,7 +10054,11 @@ Tilemap:
   - m_RefCount: 104
     m_Data: {fileID: 21300396, guid: e85a717ecd0762f4082e33f01cd80a12, type: 3}
   m_TileMatrixArray:
+<<<<<<< HEAD
   - m_RefCount: 282
+=======
+  - m_RefCount: 56
+>>>>>>> parent of a407018... Tried to fix level 3
     m_Data:
       e00: 1
       e01: 0
@@ -10106,7 +10077,11 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+<<<<<<< HEAD
   - m_RefCount: 282
+=======
+  - m_RefCount: 56
+>>>>>>> parent of a407018... Tried to fix level 3
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
