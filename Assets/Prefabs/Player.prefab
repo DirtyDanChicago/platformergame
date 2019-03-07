@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 50367569590640794}
-  jumpForce: 25
+  jumpForce: 26
   accelerationForce: 25
   maxSpeed: 40
   playerGroundCollider: {fileID: 60296105278047622}
@@ -267,6 +267,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  killZone: {fileID: 0}
   winText: {fileID: 0}
   peopleCountText: {fileID: 0}
   deathText: {fileID: 0}
